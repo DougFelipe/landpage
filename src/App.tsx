@@ -62,7 +62,7 @@ function App() {
   <div className="container mx-auto px-6">
     <div className="max-w-4xl mx-auto text-center">
       <img 
-        src="/LOGO.png" 
+        src="./LOGO.png" 
         alt="Data Designer Logo" 
         className="mx-auto mb-6 w-80 max-w-xs md:max-w-sm lg:max-w-md" 
       />
@@ -70,7 +70,7 @@ function App() {
         Soluções personalizadas em Ciência de Dados, Visualização de Dados, Machine Learning e AI
       </p>
       <a 
-        href="/Data%20Designer%20-%20Catálogo%20de%20Serviços.pdf" 
+        href="./Data%20Designer%20-%20Catálogo%20de%20Serviços.pdf" 
         download="Data Designer - Catálogo de Serviços.pdf" 
         className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg inline-flex items-center gap-2 max-w-fit mx-auto"
       >
@@ -358,7 +358,7 @@ function App() {
   <div className="container mx-auto px-6">
     <div className="max-w-4xl mx-auto text-center">
       <img 
-        src="/Douglas.jpg" 
+        src="./Douglas.jpg" 
         alt="Douglas Felipe" 
         className="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-gray-200 shadow-lg"
       />
