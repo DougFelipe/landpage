@@ -1,4 +1,5 @@
 import React from 'react';
+import FAQ from "./FAQ";
 import {
   BarChart3,
   Brain,
@@ -24,7 +25,14 @@ import {
   Layers,
   Binary,
   Gauge,
+  Linkedin,
+  Book,
+  Download,
+  Loader,
+  CheckCheck,
 } from 'lucide-react';
+
+
 
 function App() {
   return (
@@ -35,14 +43,13 @@ function App() {
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-2">
               <ChartPie className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-800">Data Designer Pro</span>
+              <span className="text-xl font-bold text-gray-800">Data Designer</span>
             </div>
             <div className="hidden md:flex items-center space-x-8">
               <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">Sobre Nós</a>
               <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
-              <a href="#testimonials" className="text-gray-600 hover:text-blue-600 transition-colors">Depoimentos</a>
-              <button className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">
-                Solicite uma Consultoria
+              <button className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors">
+                Entre em Contato
               </button>
             </div>
           </div>
@@ -50,21 +57,34 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Transformando dados em decisões inteligentes
-            </h1>
-            <p className="text-xl text-gray-600 mb-8">
-              Soluções personalizadas em análise e visualização de dados para impulsionar seu sucesso acadêmico e empresarial.
-            </p>
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg">
-              Comece Agora
-            </button>
-          </div>
-        </div>
-      </section>
+{/* Hero Section */}
+<section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+  <div className="container mx-auto px-6">
+    <div className="max-w-4xl mx-auto text-center">
+      <img 
+        src="/LOGO.png" 
+        alt="Data Designer Logo" 
+        className="mx-auto mb-6 w-80 max-w-xs md:max-w-sm lg:max-w-md" 
+      />
+      <p className="text-xl text-gray-600 mb-8">
+        Soluções personalizadas em Ciência de Dados, Visualização de Dados, Machine Learning e AI
+      </p>
+      <a 
+        href="/Data%20Designer%20-%20Catálogo%20de%20Serviços.pdf" 
+        download="Data Designer - Catálogo de Serviços.pdf" 
+        className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg inline-flex items-center gap-2 max-w-fit mx-auto"
+      >
+        <Download className="w-5 h-5" />
+        Catálogo de Serviços
+      </a>
+    </div>
+  </div>
+</section>
+
+
+
+
+
 
       {/* About Section */}
       <section id="about" className="py-20">
@@ -102,7 +122,26 @@ function App() {
       {/* Services Overview Section */}
       <section id="services" className="py-20 bg-gray-50">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Nossos Serviços</h2>
+          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Serviços Oferecidos</h2>
+          <div className="grid md:grid-cols-4 gap-8 mb-16">
+              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+                <Microscope className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900">Ciência de Dados</h3>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+                <Eye className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900">Visualização de Dados</h3>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+                <Cpu className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900">Machine Learning</h3>
+              </div>
+              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+                <Sparkles className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+                <h3 className="text-xl font-bold text-gray-900">IA</h3>
+              </div>
+            </div>
+
           <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
             {/* Academic Services */}
             <div className="bg-white rounded-xl shadow-lg p-8">
@@ -167,30 +206,8 @@ function App() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
           <div className="max-w-6xl mx-auto">
-            <div className="grid md:grid-cols-4 gap-8 mb-16">
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Microscope className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Ciência de Dados</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Eye className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Visualização de Dados</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Cpu className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Machine Learning</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Sparkles className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">IA</h3>
-              </div>
-            </div>
 
             <div className="prose prose-lg max-w-none">
-              <p className="text-gray-600 text-center mb-16">
-                O <span className="font-semibold">Data Designer Pro</span> oferece soluções especializadas em análise e visualização de dados para otimizar a compreensão e apresentação de informações complexas. Nossos serviços são projetados para fornecer insights valiosos por meio de técnicas avançadas de exploração e modelagem de dados.
-              </p>
-
               <div className="space-y-16">
                 {/* EDA Section */}
                 <div>
@@ -204,23 +221,23 @@ function App() {
                       <span className="text-gray-600">Limpeza e estruturação de dados</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <BarChart className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <ClipboardCheck className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Transformação e normalização de variáveis</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Network className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <ClipboardCheck className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Identificação de padrões e tendências</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <PieChart className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <ClipboardCheck className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Cálculo de estatísticas descritivas</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <TrendLine className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <ClipboardCheck className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Análise de correlação entre variáveis</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Target className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <ClipboardCheck className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Detecção de outliers e inconsistências</span>
                     </li>
                   </ul>
@@ -238,15 +255,15 @@ function App() {
                       <span className="text-gray-600">Escolha do tipo de gráfico ideal para cada análise</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Design de relatórios visuais para tomada de decisão</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Database className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Criação de dashboards interativos</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Robot className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Automação de relatórios visuais</span>
                     </li>
                   </ul>
@@ -260,78 +277,170 @@ function App() {
                   </p>
                   <ul className="grid md:grid-cols-2 gap-4">
                     <li className="flex items-start space-x-3">
-                      <Binary className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Testes estatísticos para validação de hipóteses</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Gauge className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Análise de variância (ANOVA e MANOVA)</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <TrendingUp className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Modelagem preditiva com regressão</span>
                     </li>
                     <li className="flex items-start space-x-3">
-                      <Network className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Técnicas de clustering e segmentação de dados</span>
                     </li>
                   </ul>
                 </div>
+
+                {/* AI & Machine Learning Section */}
+                <div>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Inteligência Artificial e Machine Learning</h3>
+                  <p className="text-gray-600 mb-6">
+                    A Inteligência Artificial (IA) e Machine Learning (ML) são tecnologias essenciais para a análise e previsão de dados, 
+                    permitindo soluções inteligentes e escaláveis. Oferecemos desde o pré-processamento até a implementação de modelos preditivos, 
+                    garantindo adaptação às necessidades específicas de cada cliente.
+                  </p>
+                  <ul className="grid md:grid-cols-2 gap-4">
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Pré-processamento de dados: normalização e balanceamento</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Algoritmos supervisionados e não supervisionados</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Construção e treinamento de modelos de aprendizado de máquina</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Automação de análise preditiva baseada em IA</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Criação de pipelines reutilizáveis para pré-processamento</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Análise da importância de variáveis para modelos preditivos</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Feature Engineering para otimização de desempenho</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Redução de dimensionalidade com PCA e t-SNE</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Uso de dados sintéticos para expansão de datasets</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Sparkles className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Otimização de hiperparâmetros para máximo desempenho</span>
+                    </li>
+                  </ul>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section id="testimonials" className="py-20">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Depoimentos</h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                name: "João Silva",
-                role: "Diretor de Operações",
-                image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-                text: "O Data Designer Pro transformou a forma como apresentamos nossos dados aos stakeholders. O dashboard criado foi essencial para decisões estratégicas."
-              },
-              {
-                name: "Maria Santos",
-                role: "Pesquisadora",
-                image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-                text: "A análise estatística fornecida pela equipe foi fundamental para a publicação do meu artigo em uma revista internacional."
-              },
-              {
-                name: "Pedro Costa",
-                role: "CEO",
-                image: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80",
-                text: "Excelente trabalho na automação dos nossos relatórios. Economizamos horas de trabalho manual toda semana."
-              }
-            ].map((testimonial, index) => (
-              <div key={index} className="bg-white rounded-xl shadow-lg p-8">
-                <div className="flex items-center space-x-4 mb-4">
-                  <img
-                    src={testimonial.image}
-                    alt={testimonial.name}
-                    className="w-12 h-12 rounded-full"
-                  />
-                  <div>
-                    <h4 className="font-semibold">{testimonial.name}</h4>
-                    <p className="text-gray-600 text-sm">{testimonial.role}</p>
-                  </div>
-                </div>
-                <p className="text-gray-600 italic">"{testimonial.text}"</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+{/* About Me Section */}
+<section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-6">
+    <div className="max-w-4xl mx-auto text-center">
+      <img 
+        src="/Douglas.jpg" 
+        alt="Douglas Felipe" 
+        className="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-gray-200 shadow-lg"
+      />
+      <h3 className="text-3xl font-bold text-gray-900">Douglas Felipe</h3>
+      <h4 className="text-lg text-gray-600 font-semibold">Biomedical Scientist | MSc. in Bioinformatics</h4>
+    </div>
+
+    {/* Academic Background */}
+    <div className="max-w-4xl mx-auto mt-12 text-center">
+      <h3 className="text-2xl font-bold text-gray-900 mb-6">Formação Acadêmica</h3>
+      <ul className="space-y-4 text-left mx-auto w-fit">
+        <li className="flex items-center space-x-3">
+          <Loader className="h-6 w-6 text-blue-500" />
+          <span className="text-gray-600 font-semibold">Doutorado em Bioinformática (UFRN | PPg - Bioinfo)</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <Loader className="h-6 w-6 text-blue-500" />
+          <span className="text-gray-600 font-semibold">Eng. de Software (IMD - UFRN)</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <CheckCheck className="h-6 w-6 text-green-500" />
+          <span className="text-gray-600 font-semibold">Especialização em Ciência de Dados (IMD - UFRN)</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <CheckCheck className="h-6 w-6 text-green-500" />
+          <span className="text-gray-600 font-semibold">Especialização em Inteligência Artificial (IMD - UFRN)</span>
+        </li>
+        <li className="flex items-center space-x-3">
+          <CheckCheck className="h-6 w-6 text-green-500" />
+          <span className="text-gray-600 font-semibold">Especialização em Inteligência Computacional (IMD - UFRN)</span>
+        </li>
+      </ul>
+    </div>
+
+    {/* Links Section */}
+    <div className="max-w-4xl mx-auto mt-12 flex justify-center space-x-4">
+      <a 
+        href="https://www.linkedin.com/in/douglas-feliipe/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center space-x-3 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
+      >
+        <Linkedin className="h-6 w-6" />
+        <span>LinkedIn</span>
+      </a>
+
+      <a 
+        href="http://lattes.cnpq.br/8053019098525102" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center space-x-3 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
+      >
+        <Book className="h-6 w-6" />
+        <span>Lattes</span>
+      </a>
+
+      <a 
+        href="/curriculum-vitae.pdf" 
+        download 
+        className="flex items-center space-x-3 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
+      >
+        <Book className="h-6 w-6" />
+        <span>Vitae</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+{/* FAQ Section */}
+<div>
+      {/* Outras seções */}
+      <FAQ />
+    </div>
+
+
+
 
       {/* Why Choose Us Section */}
       <section className="py-20 bg-blue-50">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Por Que Escolher a Data Designer Pro?
+            Por Que Escolher a Data Designer?
           </h2>
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-white rounded-xl p-8 shadow-lg">
@@ -366,7 +475,7 @@ function App() {
             <div>
               <div className="flex items-center space-x-2 mb-4">
                 <ChartPie className="h-6 w-6 text-blue-400" />
-                <span className="text-lg font-bold">Data Designer Pro</span>
+                <span className="text-lg font-bold">Data Designer</span>
               </div>
               <p className="text-gray-400">
                 Transformando dados em decisões inteligentes
@@ -377,7 +486,6 @@ function App() {
               <ul className="space-y-2">
                 <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
                 <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
-                <li><a href="#testimonials" className="text-gray-400 hover:text-white transition-colors">Depoimentos</a></li>
               </ul>
             </div>
             <div>
@@ -407,7 +515,7 @@ function App() {
           <div className="border-t border-gray-800 mt-12 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400">
-                © 2025 Data Designer Pro. Todos os direitos reservados.
+                © 2025 Data Designer. Todos os direitos reservados.
               </p>
               <p className="text-gray-400 text-sm mt-4 md:mt-0">
                 Seus dados são protegidos de acordo com nossa política de privacidade.
