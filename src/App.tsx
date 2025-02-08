@@ -1,4 +1,5 @@
 import React from 'react';
+import WhatsAppButton from "./WhatsAppButton";
 import FAQ from "./FAQ";
 import {
   BarChart3,
@@ -41,47 +42,75 @@ function App() {
     <div className="min-h-screen bg-white">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-        <nav className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center space-x-2">
-              <ChartPie className="h-8 w-8 text-blue-600" />
-              <span className="text-xl font-bold text-gray-800">Data Designer</span>
-            </div>
-            <div className="hidden md:flex items-center space-x-8">
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">Sobre Nós</a>
-              <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
-              <button className="bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition-colors">
-                Entre em Contato
-              </button>
-            </div>
-          </div>
-        </nav>
-      </header>
+  <nav className="container mx-auto px-6 py-4">
+    <div className="flex items-center justify-between">
+      {/* Logo Section */}
+      <div className="flex items-center space-x-2">
+        <ChartPie className="h-8 w-8 text-blue-600" />
+        <span className="text-xl font-bold text-gray-800">Data Designer</span>
+      </div>
+
+      {/* Navigation Links */}
+      <div className="hidden md:flex items-center space-x-8">
+        <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">Sobre Nós</a>
+        <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
+        <a 
+          href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer." 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="bg-green-600 text-white px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-green-700 transition-colors"
+        >
+          <img 
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+            alt="WhatsApp Logo" 
+            className="h-5 w-5"
+          />
+          <span>Entre em Contato</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+
+
 
       {/* Hero Section */}
-{/* Hero Section */}
-<section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
+      <section className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
   <div className="container mx-auto px-6">
     <div className="max-w-4xl mx-auto text-center">
-      <img 
-        src="/LOGO.png" 
-        alt="Data Designer Logo" 
-        className="mx-auto mb-6 w-80 max-w-xs md:max-w-sm lg:max-w-md" 
+      <img
+        src="/LOGO.png"
+        alt="Data Designer Logo"
+        className="mx-auto mb-6 w-80 max-w-xs md:max-w-sm lg:max-w-md"
       />
       <p className="text-xl text-gray-600 mb-8">
-        Soluções personalizadas em Ciência de Dados, Visualização de Dados, Machine Learning e AI
+        Soluções personalizadas em Ciência de Dados, Visualização de Dados,
+        Machine Learning e AI
       </p>
-      <a 
-        href="/Data%20Designer%20-%20Catálogo%20de%20Serviços.pdf" 
-        download="Data Designer - Catálogo de Serviços.pdf" 
-        className="bg-blue-600 text-white px-6 py-3 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg inline-flex items-center gap-2 max-w-fit mx-auto"
-      >
-        <Download className="w-5 h-5" />
-        Catálogo de Serviços
-      </a>
+      {/* Botão de Catálogo */}
+      <div className="mb-4">
+        <a
+          href="/Data%20Designer%20-%20Catálogo%20de%20Serviços.pdf"
+          download="Data Designer - Catálogo de Serviços.pdf"
+          className="bg-blue-600 text-white px-4 py-2 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg inline-flex items-center gap-2 w-auto mx-auto"
+        >
+          <Download className="w-5 h-5" />
+          Catálogo de Serviços
+        </a>
+      </div>
+      {/* Botão de WhatsApp */}
+      <div>
+        <WhatsAppButton
+          message="Olá, gostaria de saber mais sobre os serviços do Data Designer."
+          phoneNumber="5584998017577"
+        />
+      </div>
     </div>
   </div>
 </section>
+
+
+
 
 
 
@@ -643,62 +672,61 @@ function App() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white py-12">
-        <div className="container mx-auto px-6">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <div className="flex items-center space-x-2 mb-4">
-                <ChartPie className="h-6 w-6 text-blue-400" />
-                <span className="text-lg font-bold">Data Designer</span>
-              </div>
-              <p className="text-gray-400">
-                Transformando dados em decisões inteligentes
-              </p>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
-              <ul className="space-y-2">
-                <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
-                <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
-              </ul>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
-              <div className="flex space-x-4">
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  LinkedIn
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Twitter
-                </a>
-                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                  Instagram
-                </a>
-              </div>
-            </div>
-            <div>
-              <h4 className="text-lg font-semibold mb-4">Contato Direto</h4>
-              <a
-                href="https://wa.me/1234567890"
-                className="inline-flex items-center space-x-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
-              >
-                WhatsApp
-              </a>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400">
-                © 2025 Data Designer. Todos os direitos reservados.
-              </p>
-              <p className="text-gray-400 text-sm mt-4 md:mt-0">
-                Seus dados são protegidos de acordo com nossa política de privacidade.
-              </p>
-            </div>
-          </div>
+{/* Footer */}
+<footer className="bg-gray-900 text-white py-12">
+  <div className="container mx-auto px-6">
+    <div className="grid md:grid-cols-4 gap-8">
+      <div>
+        <div className="flex items-center space-x-2 mb-4">
+          <ChartPie className="h-6 w-6 text-blue-400" />
+          <span className="text-lg font-bold">Data Designer</span>
         </div>
-      </footer>
+        <p className="text-gray-400">
+          Transformando dados em decisões inteligentes
+        </p>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
+        <ul className="space-y-2">
+          <li><a href="#about" className="text-gray-400 hover:text-white transition-colors">Sobre Nós</a></li>
+          <li><a href="#services" className="text-gray-400 hover:text-white transition-colors">Serviços</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
+        <div className="flex space-x-4">
+          <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            LinkedIn
+          </a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            Twitter
+          </a>
+          <a href="#" className="text-gray-400 hover:text-white transition-colors">
+            Instagram
+          </a>
+        </div>
+      </div>
+      <div>
+        <h4 className="text-lg font-semibold mb-4">Contato Direto</h4>
+        <WhatsAppButton
+          message="Olá, gostaria de saber mais sobre os serviços do Data Designer."
+          phoneNumber="5584998017577"
+        />
+      </div>
+    </div>
+    <div className="border-t border-gray-800 mt-12 pt-8">
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        <p className="text-gray-400">
+          © 2025 Data Designer. Todos os direitos reservados.
+        </p>
+        <p className="text-gray-400 text-sm mt-4 md:mt-0">
+          Seus dados são protegidos de acordo com nossa política de privacidade.
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
     </div>
   );
 }
