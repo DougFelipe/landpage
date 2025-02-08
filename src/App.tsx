@@ -7,7 +7,7 @@ import {
   Database,
   FileSpreadsheet,
   LineChart,
-  MessageSquare,
+  MessageSquareShare,
   Notebook as Robot,
   ScrollText,
   Settings2,
@@ -25,11 +25,13 @@ import {
   Layers,
   Binary,
   Gauge,
+  FileText,
   Linkedin,
   Book,
   Download,
   Loader,
   CheckCheck,
+  MessagesSquare,
 } from 'lucide-react';
 
 
@@ -266,34 +268,59 @@ function App() {
                       <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
                       <span className="text-gray-600">Automação de relatórios visuais</span>
                     </li>
-                  </ul>
+                    <li className="flex items-start space-x-3">
+                      <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Aplicação de design thinking</span>
+                    </li>
+                    <li className="flex items-start space-x-3">
+                      <Eye className="h-6 w-6 text-blue-600 flex-shrink-0" />
+                      <span className="text-gray-600">Criação de material científico</span>
+                    </li>
+                  </ul>                 
                 </div>
 
-                {/* Modeling Section */}
-                <div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-6">Modelagem de Dados</h3>
-                  <p className="text-gray-600 mb-6">
-                    A modelagem de dados é essencial para a compreensão de padrões, previsões e validação de hipóteses em diversas áreas da ciência de dados.
-                  </p>
-                  <ul className="grid md:grid-cols-2 gap-4">
-                    <li className="flex items-start space-x-3">
-                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-600">Testes estatísticos para validação de hipóteses</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-600">Análise de variância (ANOVA e MANOVA)</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-600">Modelagem preditiva com regressão</span>
-                    </li>
-                    <li className="flex items-start space-x-3">
-                      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
-                      <span className="text-gray-600">Técnicas de clustering e segmentação de dados</span>
-                    </li>
-                  </ul>
-                </div>
+{/* Modeling Section */}
+<div>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Modelagem de Dados</h3>
+  <p className="text-gray-600 mb-6">
+    A modelagem de dados é essencial para a compreensão de padrões, previsões e validação de hipóteses em diversas áreas da ciência de dados.
+  </p>
+  <ul className="grid md:grid-cols-2 gap-4">
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Testes estatísticos para validação de hipóteses</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Análise de variância (ANOVA e MANOVA)</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Modelagem preditiva com regressão</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Correlação e análise de dependência entre variáveis</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Técnicas de clustering e segmentação de dados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Análise de Componentes Principais (PCA)</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Modelos probabilísticos para inferência estatística</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Layers className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Validação cruzada e métricas para avaliar modelos</span>
+    </li>
+  </ul>
+</div>
+
 
                 {/* AI & Machine Learning Section */}
                 <div>
@@ -346,6 +373,153 @@ function App() {
                     </li>
                   </ul>
                 </div>
+                
+                {/* Dashboards and Visual Reports Section */}
+<div>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Dashboards e Relatórios Visuais</h3>
+  <p className="text-gray-600 mb-6">
+    Dashboards e relatórios visuais são ferramentas indispensáveis para transformar dados complexos em informações acessíveis e práticas. 
+    Este serviço é focado em criar soluções personalizadas e interativas que atendam às demandas de comunicação visual e análise estratégica.
+  </p>
+  <ul className="grid md:grid-cols-2 gap-4">
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Desenvolvimento de dashboards interativos</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Automação de relatórios gráficos</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Visualização de indicadores-chave de desempenho (KPIs)</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Uso de Storytelling na apresentação de dados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Criação de gráficos animados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Melhores práticas de design de dashboards</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Geração de relatórios para defesa de dissertação/tese</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <FileText className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Criação de gráficos dinâmicos para publicações científicas</span>
+    </li>
+  </ul>
+</div>
+
+{/* Tools and Technologies Section */}
+<div>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Utilização de Ferramentas e Tecnologias</h3>
+  <p className="text-gray-600 mb-6">
+    Este serviço oferece capacitação no uso de ferramentas e tecnologias essenciais para análise, visualização e automação de processos, 
+    promovendo eficiência e autonomia no trabalho com dados.
+  </p>
+  <ul className="grid md:grid-cols-2 gap-4">
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Treinamento em Python e R para análise de dados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Automação de ETL</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Configuração e otimização de notebooks Jupyter e RMarkdown</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Treinamento em versionamento de dados e scripts</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Desenvolvimento de Dashboards</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Processamento de Texto e NLP</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Automação de Tarefas com Scripts Python</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <Cpu className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Criação de relatórios automáticos com LaTeX e RMarkdown</span>
+    </li>
+  </ul>
+</div>
+
+{/* Interpretation and Communication Section */}
+<div>
+  <h3 className="text-2xl font-bold text-gray-900 mb-6">Interpretação e Comunicação de Resultados</h3>
+  <p className="text-gray-600 mb-6">
+    Este serviço é focado em auxiliar na interpretação de dados complexos e na comunicação eficaz de resultados, seja em contextos acadêmicos ou corporativos. 
+    Nosso objetivo é transformar análises em informações claras, compreensíveis e visualmente impactantes.
+  </p>
+  <ul className="grid md:grid-cols-2 gap-4">
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Auxílio na escolha de testes estatísticos apropriados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Interpretação de resultados quantitativos</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Ajuste e refinamento de gráficos acadêmicos</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Sugestões para melhoria da apresentação de dados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Treinamento em comunicação de dados</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Adaptação de relatórios para diferentes padrões de publicação</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Preparação para defesa de teses ou dissertações</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Criação de relatórios executivos para apresentações</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Preparação de materiais para apresentações corporativas</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Análise de mercado e previsão de tendências</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Construção de narrativas de dados para marketing</span>
+    </li>
+    <li className="flex items-start space-x-3">
+      <MessageSquareShare className="h-6 w-6 text-blue-600 flex-shrink-0" />
+      <span className="text-gray-600">Avaliação de desempenho de equipes</span>
+    </li>
+  </ul>
+</div>
+
+
 
               </div>
             </div>
@@ -393,37 +567,38 @@ function App() {
       </ul>
     </div>
 
-    {/* Links Section */}
-    <div className="max-w-4xl mx-auto mt-12 flex justify-center space-x-4">
-      <a 
-        href="https://www.linkedin.com/in/douglas-feliipe/" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="flex items-center space-x-3 px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition"
-      >
-        <Linkedin className="h-6 w-6" />
-        <span>LinkedIn</span>
-      </a>
+{/* Links Section */}
+<div className="max-w-4xl mx-auto mt-12 flex justify-center space-x-4">
+  <a 
+    href="https://www.linkedin.com/in/douglas-feliipe/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition"
+  >
+    <Linkedin className="h-5 w-5" />
+    <span>LinkedIn</span>
+  </a>
 
-      <a 
-        href="http://lattes.cnpq.br/8053019098525102" 
-        target="_blank" 
-        rel="noopener noreferrer"
-        className="flex items-center space-x-3 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition"
-      >
-        <Book className="h-6 w-6" />
-        <span>Lattes</span>
-      </a>
+  <a 
+    href="http://lattes.cnpq.br/8053019098525102" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    className="flex items-center space-x-2 px-4 py-2 bg-gray-700 text-white text-sm rounded-lg hover:bg-gray-800 transition"
+  >
+    <Book className="h-5 w-5" />
+    <span>Lattes</span>
+  </a>
 
-      <a 
-        href="/curriculum-vitae.pdf" 
-        download 
-        className="flex items-center space-x-3 px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition"
-      >
-        <Book className="h-6 w-6" />
-        <span>Vitae</span>
-      </a>
-    </div>
+  <a 
+    href="/curriculum-vitae.pdf" 
+    download 
+    className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition"
+  >
+    <Book className="h-5 w-5" />
+    <span>Vitae</span>
+  </a>
+</div>
+
   </div>
 </section>
 
@@ -451,7 +626,7 @@ function App() {
               </p>
             </div>
             <div className="bg-white rounded-xl p-8 shadow-lg">
-              <MessageSquare className="h-12 w-12 text-blue-600 mb-4" />
+              <MessageSquareShare className="h-12 w-12 text-blue-600 mb-4" />
               <h3 className="text-xl font-semibold mb-4">Atendimento Especializado</h3>
               <p className="text-gray-600">
                 Suporte técnico dedicado e comunicação clara durante todo o processo.
