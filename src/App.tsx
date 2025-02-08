@@ -1,8 +1,12 @@
 import React from 'react';
 import WhatsAppButton from "./WhatsAppButton";
 import FAQ from "./FAQ";
+import TechStack from "./TechStacks"; 
+import PlanCard from "./PlanCard";
+
 import {
   BarChart3,
+  Calendar,
   Brain,
   PieChart as ChartPie,
   Database,
@@ -110,45 +114,6 @@ function App() {
 </section>
 
 
-
-
-
-
-
-
-
-      {/* About Section */}
-      <section id="about" className="py-20">
-        <div className="container mx-auto px-6">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Sobre Nós</h2>
-            <div className="grid md:grid-cols-2 gap-12">
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Brain className="h-8 w-8 text-blue-600 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Nossa Missão</h3>
-                    <p className="text-gray-600">
-                      Oferecemos soluções personalizadas em análise e visualização de dados para acadêmicos, pesquisadores e empresas, transformando informações complexas em insights claros e acionáveis.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <Settings2 className="h-8 w-8 text-blue-600 flex-shrink-0" />
-                  <div>
-                    <h3 className="text-xl font-semibold mb-2">Nosso Diferencial</h3>
-                    <p className="text-gray-600">
-                      Combinamos expertise técnica com ferramentas de última geração, como Python, R, Power BI e Tableau, para garantir a máxima eficiência e precisão nos resultados.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Services Overview Section */}
       <section id="services" className="py-20 bg-gray-50">
@@ -554,7 +519,105 @@ function App() {
             </div>
           </div>
         </div>
+
+        <div>
+      {/* Outras seções do seu site */}
+      <TechStack />
+      {/* Outras seções do seu site */}
+    </div>
       </section>
+
+
+      <div className="container mx-auto px-6 py-10">
+  <h1 className="text-4xl font-bold text-center mb-10">Pacotes de Serviços</h1>
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <PlanCard
+      title="Sob Demanda"
+      description="Suporte técnico ou consultorias pontuais com flexibilidade total, ajustado às suas necessidades."
+      price="Apenas R$89*"
+      features={[
+        "*Oferta válida apenas em fevereiro",
+        "Flexibilidade total",
+        "Consultorias pontuais",        
+      ]}
+    />
+    <PlanCard
+      title="Avaliação e Planejamento"
+      description="Análise detalhada do escopo, diagnóstico de problemas e planejamento estratégico para alcançar resultados assertivos."
+      price="A Combinar"
+      features={[
+        "Análise detalhada do escopo",
+        "Diagnóstico de problemas",
+        "Planejamento estratégico",
+      ]}
+    />
+    <PlanCard
+      title="Execução Completa"
+      description="Solução integrada que cobre todas as etapas do projeto, garantindo entregas no prazo e resultados de alto impacto."
+      price="A Combinar"
+      features={[
+        "Cobertura de todas as etapas",
+        "Entrega no prazo",
+        "Resultados de alto impacto",
+      ]}
+    />
+    <PlanCard
+      title="Serviços Recorrentes"
+      description="Suporte contínuo com análises regulares, atualizações de dashboards e acompanhamento estratégico para decisões informadas."
+      price="A Combinar"
+      features={[
+        "Análises regulares",
+        "Atualizações de dashboards",
+        "Acompanhamento estratégico",
+      ]}
+    />
+  </div>
+
+  {/* Centralized Button */}
+  <div className="flex justify-center mt-8">
+    <WhatsAppButton
+      message="Olá, gostaria de saber mais sobre os pacotes de serviços."
+      phoneNumber="5584998017577"
+    />
+  </div>
+</div>
+
+
+
+{/* Why Choose Us Section */}
+<section className="py-20 bg-blue-50">
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
+      Por Que Escolher a Data Designer?
+    </h2>
+    <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="bg-white rounded-xl p-8 shadow-lg">
+        <FileSpreadsheet className="h-12 w-12 text-blue-600 mb-4" />
+        <h3 className="text-xl font-semibold mb-4">Soluções Personalizadas</h3>
+        <p className="text-gray-600">
+          Cada projeto é único e recebe atenção personalizada para atender suas necessidades específicas
+        </p>
+      </div>
+      <div className="bg-white rounded-xl p-8 shadow-lg">
+        <MessageSquareShare className="h-12 w-12 text-blue-600 mb-4" />
+        <h3 className="text-xl font-semibold mb-4">Atendimento Especializado</h3>
+        <p className="text-gray-600">
+          Suporte técnico dedicado e comunicação clara durante todo o processo
+        </p>
+      </div>
+      <div className="bg-white rounded-xl p-8 shadow-lg">
+        <Calendar className="h-12 w-12 text-blue-600 mb-4" />
+        <h3 className="text-xl font-semibold mb-4">Prazos Adaptáveis</h3>
+        <p className="text-gray-600">
+          Adequamos os cronogramas para atender às suas demandas e prazos específicos
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 
 {/* About Me Section */}
 <section className="py-20 bg-gray-50">
@@ -631,6 +694,12 @@ function App() {
   </div>
 </section>
 
+
+
+
+
+
+
 {/* FAQ Section */}
 <div>
       {/* Outras seções */}
@@ -640,37 +709,6 @@ function App() {
 
 
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 bg-blue-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">
-            Por Que Escolher a Data Designer?
-          </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <FileSpreadsheet className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Soluções Personalizadas</h3>
-              <p className="text-gray-600">
-                Cada projeto é único e recebe atenção personalizada para atender suas necessidades específicas.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <MessageSquareShare className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Atendimento Especializado</h3>
-              <p className="text-gray-600">
-                Suporte técnico dedicado e comunicação clara durante todo o processo.
-              </p>
-            </div>
-            <div className="bg-white rounded-xl p-8 shadow-lg">
-              <Database className="h-12 w-12 text-blue-600 mb-4" />
-              <h3 className="text-xl font-semibold mb-4">Resultados Impactantes</h3>
-              <p className="text-gray-600">
-                Visualizações claras e insights acionáveis para tomada de decisão.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
 
 {/* Footer */}
 <footer className="bg-gray-900 text-white py-12">
