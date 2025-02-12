@@ -89,6 +89,14 @@ function FAQ() {
       <div className="container mx-auto px-6 text-center">
         <HelpCircle className="w-12 h-12 text-blue-600 mx-auto mb-4" />
         <h3 className="text-3xl font-bold text-gray-900 mb-4">Perguntas Frequentes (FAQ)</h3>
+        <div className="container mx-auto px-6 text-center">
+    <p className="text-lg text-gray-700 leading-relaxed mt-4">
+      Aqui estão algumas das dúvidas mais comuns sobre nossos serviços, processos e formas de contratação
+    </p>
+    <p className="text-lg text-gray-700 leading-relaxed mt-4">
+      Caso não encontre sua resposta, entre em contato para mais informações
+    </p>
+  </div>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition inline-flex items-center"

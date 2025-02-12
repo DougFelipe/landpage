@@ -529,52 +529,59 @@ function App() {
 
 
       <div className="container mx-auto px-6 py-10">
-  <h1 className="text-4xl font-bold text-center mb-10">Pacotes de Serviços</h1>
-  <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+  <h1 className="text-4xl font-bold text-center mb-4">Pacotes de Serviços</h1>
+  <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
+    Escolha o plano ideal para as suas necessidades!</p>
+    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
+    Oferecemos desde consultorias pontuais até soluções completas e serviços recorrentes
+    </p>
+
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     <PlanCard
       title="Sob Demanda"
-      description="Suporte técnico ou consultorias pontuais com flexibilidade total, ajustado às suas necessidades."
+      description="Ideal para quem precisa de suporte técnico ou consultorias rápidas e flexíveis. Você contrata apenas o tempo necessário para resolver suas demandas específicas."
       price="Apenas R$89*"
       features={[
         "*Oferta válida apenas em fevereiro",
-        "Flexibilidade total",
-        "Consultorias pontuais",        
+        " Atendimento sob medida para suas necessidades",
+        " Consultorias pontuais e objetivas",
+        " Flexibilidade total para ajustes no serviço",
       ]}
     />
     <PlanCard
       title="Avaliação e Planejamento"
-      description="Análise detalhada do escopo, diagnóstico de problemas e planejamento estratégico para alcançar resultados assertivos."
+      description="Se você deseja estruturar um projeto, este plano oferece uma análise detalhada do escopo, diagnóstico de problemas e planejamento estratégico para soluções eficazes."
       price="A Combinar"
       features={[
-        "Análise detalhada do escopo",
-        "Diagnóstico de problemas",
-        "Planejamento estratégico",
+        " Diagnóstico preciso dos desafios do projeto",
+        " Estratégias personalizadas para otimizar resultados",
+        " Planejamento detalhado para cada etapa",
       ]}
     />
     <PlanCard
       title="Execução Completa"
-      description="Solução integrada que cobre todas as etapas do projeto, garantindo entregas no prazo e resultados de alto impacto."
+      description="Este plano abrange todas as fases do seu projeto, desde a concepção até a entrega final. Uma solução completa para garantir qualidade e prazos."
       price="A Combinar"
       features={[
-        "Cobertura de todas as etapas",
-        "Entrega no prazo",
-        "Resultados de alto impacto",
+        " Gerenciamento completo do projeto",
+        " Implementação de todas as etapas com acompanhamento",
+        " Garantia de entrega dentro do prazo e com qualidade",
       ]}
     />
     <PlanCard
       title="Serviços Recorrentes"
-      description="Suporte contínuo com análises regulares, atualizações de dashboards e acompanhamento estratégico para decisões informadas."
+      description="Para quem busca suporte contínuo, este plano oferece análises periódicas, atualizações constantes e acompanhamento estratégico para maximizar resultados."
       price="A Combinar"
       features={[
-        "Análises regulares",
-        "Atualizações de dashboards",
-        "Acompanhamento estratégico",
+        " Monitoramento e análise regular de dados",
+        " Atualizações constantes para otimização",
+        " Suporte estratégico contínuo para melhorias",
       ]}
     />
   </div>
 
   {/* Centralized Button */}
-  <div className="flex justify-center mt-8">
+  <div className="flex justify-center mt-10">
     <WhatsAppButton
       message="Olá, gostaria de saber mais sobre os pacotes de serviços."
       phoneNumber="5584998017577"
@@ -629,8 +636,23 @@ function App() {
         className="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-gray-200 shadow-lg"
       />
       <h3 className="text-3xl font-bold text-gray-900">Douglas Felipe</h3>
-      <h4 className="text-lg text-gray-600 font-semibold">Biomedical Scientist | MSc. in Bioinformatics</h4>
+      <h4 className="text-lg text-gray-600 font-semibold">
+        Biomédico | Bioinformata | Analista de Dados
+      </h4>
     </div>
+
+    {/* Introduction */}
+    <div className="max-w-4xl mx-auto mt-6 text-center">
+  <p className="text-lg text-gray-700 leading-relaxed mt-4">
+    Com uma formação multidisciplinar, atuo na interseção entre 
+    <span className="font-semibold"> Bioinformática, Engenharia de Software, Ciência de Dados e IA</span>.
+  </p>
+  <p className="text-lg text-gray-700 leading-relaxed mt-4">
+    Trabalho com <span className="font-semibold">Python e R</span> para criar modelos preditivos, 
+    construir pipelines de análise e elaborar dashboards que facilitam a tomada de decisão baseada em dados.
+  </p>
+</div>
+
 
     {/* Academic Background */}
     <div className="max-w-4xl mx-auto mt-12 text-center">
@@ -659,42 +681,39 @@ function App() {
       </ul>
     </div>
 
-{/* Links Section */}
-<div className="max-w-4xl mx-auto mt-12 flex justify-center space-x-4">
-  <a 
-    href="https://www.linkedin.com/in/douglas-feliipe/" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition"
-  >
-    <Linkedin className="h-5 w-5" />
-    <span>LinkedIn</span>
-  </a>
+    {/* Links Section */}
+    <div className="max-w-4xl mx-auto mt-12 flex justify-center space-x-4">
+      <a 
+        href="https://www.linkedin.com/in/douglas-feliipe/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 px-4 py-2 bg-blue-500 text-white text-sm rounded-lg hover:bg-blue-600 transition"
+      >
+        <Linkedin className="h-5 w-5" />
+        <span>LinkedIn</span>
+      </a>
 
-  <a 
-    href="http://lattes.cnpq.br/8053019098525102" 
-    target="_blank" 
-    rel="noopener noreferrer"
-    className="flex items-center space-x-2 px-4 py-2 bg-gray-700 text-white text-sm rounded-lg hover:bg-gray-800 transition"
-  >
-    <Book className="h-5 w-5" />
-    <span>Lattes</span>
-  </a>
+      <a 
+        href="http://lattes.cnpq.br/8053019098525102" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        className="flex items-center space-x-2 px-4 py-2 bg-gray-700 text-white text-sm rounded-lg hover:bg-gray-800 transition"
+      >
+        <Book className="h-5 w-5" />
+        <span>Lattes</span>
+      </a>
 
-  <a 
-    href="/curriculum-vitae.pdf" 
-    download 
-    className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition"
-  >
-    <Book className="h-5 w-5" />
-    <span>Vitae</span>
-  </a>
-</div>
-
+      <a 
+        href="/Douglas Felipe - Curriculum Vitae.pdf" 
+        download 
+        className="flex items-center space-x-2 px-4 py-2 bg-green-500 text-white text-sm rounded-lg hover:bg-green-600 transition"
+      >
+        <Book className="h-5 w-5" />
+        <span>Vitae</span>
+      </a>
+    </div>
   </div>
 </section>
-
-
 
 
 
