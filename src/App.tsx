@@ -99,7 +99,7 @@ function App() {
           className="bg-blue-600 text-white px-4 py-2 rounded-full text-lg hover:bg-blue-700 transition-colors shadow-lg inline-flex items-center gap-2 w-auto mx-auto"
         >
           <Download className="w-5 h-5" />
-          Catálogo de Serviços
+          Consulte o Catálogo de Serviços
         </a>
       </div>
       {/* Botão de WhatsApp */}
@@ -539,7 +539,7 @@ function App() {
   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     <PlanCard
       title="Sob Demanda"
-      description="Ideal para quem precisa de suporte técnico ou consultorias rápidas e flexíveis. Você contrata apenas o tempo necessário para resolver suas demandas específicas."
+      description="Ideal para quem precisa de suporte rápido e flexível. Você contrata apenas o tempo necessário para resolver suas demandas específicas."
       price="Apenas R$89*"
       features={[
         "*Oferta válida apenas em fevereiro",
