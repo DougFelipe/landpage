@@ -3,6 +3,9 @@ import WhatsAppButton from "./WhatsAppButton";
 import FAQ from "./FAQ";
 import TechStack from "./TechStacks"; 
 import PlanCard from "./PlanCard";
+import FormularioServicos from "./FormularioServicos";
+
+
 
 import {
   BarChart3,
@@ -580,14 +583,9 @@ function App() {
     />
   </div>
 
-  {/* Centralized Button */}
-  <div className="flex justify-center mt-10">
-    <WhatsAppButton
-      message="Olá, gostaria de saber mais sobre os pacotes de serviços."
-      phoneNumber="5584998017577"
-    />
-  </div>
-</div>
+  <div className="App">
+      <FormularioServicos />
+    </div>
 
 
 
@@ -781,6 +779,7 @@ function App() {
 </footer>
 
     </div>
+    </div> // <-- esta div
   );
 }
 
