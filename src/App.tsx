@@ -647,10 +647,6 @@ function App() {
     Com uma formação multidisciplinar, atuo na interseção entre 
     <span className="font-semibold"> Bioinformática, Engenharia de Software, Ciência de Dados e IA</span>.
   </p>
-  <p className="text-lg text-gray-700 leading-relaxed mt-4">
-    Trabalho com <span className="font-semibold">Python e R</span> para criar modelos preditivos, 
-    construir pipelines de análise e elaborar dashboards que facilitam a tomada de decisão baseada em dados.
-  </p>
 </div>
 
 
