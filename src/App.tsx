@@ -53,16 +53,14 @@ function App() {
       <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
   <nav className="container mx-auto px-6 py-4">
     <div className="flex items-center justify-between">
-      {/* Logo Section */}
-      <div className="flex items-center space-x-2">
-        <ChartPie className="h-8 w-8 text-blue-600" />
-        <span className="text-xl font-bold text-gray-800">Data Designer</span>
-      </div>
+{/* Logo Section */}
+<div className="flex items-center space-x-2">
+  <img src="/LOGO.png" alt="Logo Data Designer" className="h-8 w-auto" />
+  <span className="text-xl font-bold text-gray-800">Data Designer</span>
+</div>
 
       {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-8">
-        <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">Sobre Nós</a>
-        <a href="#services" className="text-gray-600 hover:text-blue-600 transition-colors">Serviços</a>
         <a 
           href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer." 
           target="_blank" 
@@ -783,41 +781,25 @@ function App() {
 
 
 {/* Footer */}
-<footer className="bg-gray-900 text-white py-12">
+<footer className="pt-32 pb-20 bg-gradient-to-br from-blue-50 to-white">
   <div className="container mx-auto px-6">
-    <div className="grid md:grid-cols-4 gap-8">
-      <div>
-        <div className="flex items-center space-x-2 mb-4">
-          <ChartPie className="h-6 w-6 text-blue-400" />
-          <span className="text-lg font-bold">Data Designer</span>
-        </div>
-        <p className="text-gray-400">
-          Transformando dados em decisões inteligentes
-        </p>
+    <div className="flex flex-col items-center md:flex-row md:justify-center md:space-x-20 mb-10 text-center md:text-left">
+      
+      {/* Logo Section */}
+      <div className="flex items-center space-x-2 mb-6 md:mb-0">
+        <img src="/LOGO.png" alt="Logo Data Designer" className="h-10 w-auto" />
+        <span className="text-xl font-bold text-gray-800">Data Designer</span>
       </div>
-      <div>
-        <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
-        <ul className="space-y-2">
-          <li>
-            <a href="#about" className="text-gray-400 hover:text-white transition-colors">
-              Sobre Nós
-            </a>
-          </li>
-          <li>
-            <a href="#services" className="text-gray-400 hover:text-white transition-colors">
-              Serviços
-            </a>
-          </li>
-        </ul>
-      </div>
+
+      {/* Redes Sociais */}
       <div>
         <h4 className="text-lg font-semibold mb-4">Redes Sociais</h4>
-        <div className="flex space-x-4">
+        <div className="flex justify-center md:justify-start space-x-4">
           <a
             href="https://www.linkedin.com/in/seu-perfil"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-600 hover:text-blue-600 transition-colors"
           >
             <Linkedin className="h-6 w-6" />
           </a>
@@ -825,13 +807,15 @@ function App() {
             href="https://www.instagram.com/seu-perfil"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-400 hover:text-white transition-colors"
+            className="text-gray-600 hover:text-pink-500 transition-colors"
           >
             <Instagram className="h-6 w-6" />
           </a>
         </div>
       </div>
-      <div>
+
+      {/* Contato Direto */}
+      <div className="mt-6 md:mt-0">
         <h4 className="text-lg font-semibold mb-4">Contato Direto</h4>
         <WhatsAppButton
           message="Olá, gostaria de saber mais sobre os serviços do Data Designer."
@@ -839,18 +823,18 @@ function App() {
         />
       </div>
     </div>
-    <div className="border-t border-gray-800 mt-12 pt-8">
-      <div className="flex flex-col md:flex-row justify-between items-center">
-        <p className="text-gray-400">
-          © 2025 Data Designer. Todos os direitos reservados.
-        </p>
-        <p className="text-gray-400 text-sm mt-4 md:mt-0">
-          Seus dados são protegidos de acordo com nossa política de privacidade.
-        </p>
-      </div>
+
+    <div className="border-t border-gray-200 pt-6 mt-6 text-center space-y-2">
+      <p className="text-gray-600">
+        © 2025 Data Designer. Todos os direitos reservados.
+      </p>
+      <p className="text-gray-500 text-sm">
+        Seus dados são protegidos de acordo com nossa política de privacidade.
+      </p>
     </div>
   </div>
 </footer>
+
 
     </div>
     </div> // <-- esta div
