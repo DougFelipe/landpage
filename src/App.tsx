@@ -121,86 +121,145 @@ function App() {
 
       {/* Services Overview Section */}
       <section id="services" className="py-20 bg-gray-50">
-        <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Serviços Oferecidos</h2>
-          <div className="grid md:grid-cols-4 gap-8 mb-16">
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Microscope className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Ciência de Dados</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Eye className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Visualização de Dados</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Cpu className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">Machine Learning</h3>
-              </div>
-              <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
-                <Sparkles className="h-12 w-12 text-blue-600 mx-auto mb-4" />
-                <h3 className="text-xl font-bold text-gray-900">IA</h3>
-              </div>
-            </div>
+  <div className="container mx-auto px-6">
+    <h2 className="text-3xl font-bold text-center text-gray-900 mb-12">Serviços Oferecidos</h2>
 
-          <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
-            {/* Academic Services */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Acadêmico</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <LineChart className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Análise Exploratória de Dados (EDA)</h4>
-                    <p className="text-gray-600">Análise detalhada e visualização de padrões em seus dados</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <BarChart3 className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Dashboards para Dissertações e Teses</h4>
-                    <p className="text-gray-600">Visualizações interativas para apresentar seus resultados</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <ScrollText className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Modelagem Estatística</h4>
-                    <p className="text-gray-600">Testes de hipóteses e análises estatísticas avançadas</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+    <div className="grid md:grid-cols-4 gap-8 mb-16">
+      <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+        <Microscope className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-gray-900">Ciência de Dados</h3>
+      </div>
+      <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+        <Eye className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-gray-900">Visualização de Dados</h3>
+      </div>
+      <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+        <Cpu className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-gray-900">Machine Learning</h3>
+      </div>
+      <div className="bg-blue-50 p-6 rounded-xl text-center hover:bg-blue-100 transition-colors">
+        <Sparkles className="h-12 w-12 text-blue-600 mx-auto mb-4" />
+        <h3 className="text-xl font-bold text-gray-900">IA</h3>
+      </div>
+    </div>
 
-            {/* Corporate Services */}
-            <div className="bg-white rounded-xl shadow-lg p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Corporativo</h3>
-              <div className="space-y-6">
-                <div className="flex items-start space-x-4">
-                  <TrendingUp className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Dashboards Gerenciais</h4>
-                    <p className="text-gray-600">Painéis interativos para monitoramento em tempo real</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Robot className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Automação de Relatórios</h4>
-                    <p className="text-gray-600">Integração e automatização de processos de dados</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <Target className="h-6 w-6 text-blue-600" />
-                  <div>
-                    <h4 className="font-semibold">Análise de KPIs</h4>
-                    <p className="text-gray-600">Monitoramento e análise de indicadores-chave</p>
-                  </div>
-                </div>
-              </div>
+    <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+      {/* Academic Services */}
+      <div className="bg-white rounded-xl shadow-lg p-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Acadêmico</h3>
+        <div className="space-y-6">
+          <div className="flex items-start space-x-4">
+            <LineChart className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Análise Exploratória de Dados</h4>
+              <p className="text-gray-600">Limpeza de planilhas de dados experimentais e identificação de padrões.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Eye className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Visualização de Dados</h4>
+              <p className="text-gray-600">Criação de gráficos para artigos científicos e teses.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Layers className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Modelagem de Dados</h4>
+              <p className="text-gray-600">Aplicação de testes estatísticos como ANOVA e regressão para validação de hipóteses.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Sparkles className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Machine Learning</h4>
+              <p className="text-gray-600">Modelos preditivos para análise de experimentos e dados clínicos.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <FileText className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Dashboards e Relatórios</h4>
+              <p className="text-gray-600">Painéis para apresentação de resultados de pesquisas acadêmicas.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Cpu className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Ferramentas e Tecnologias</h4>
+              <p className="text-gray-600">Aulas práticas de Python, R e ferramentas estatísticas.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <MessageSquareShare className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Comunicação de Resultados</h4>
+              <p className="text-gray-600">Apoio na redação científica e interpretação de resultados estatísticos.</p>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+
+      {/* Corporate Services */}
+      <div className="bg-white rounded-xl shadow-lg p-8">
+        <h3 className="text-2xl font-bold text-gray-900 mb-6">Corporativo</h3>
+        <div className="space-y-6">
+          <div className="flex items-start space-x-4">
+            <LineChart className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Análise Exploratória de Dados</h4>
+              <p className="text-gray-600">Diagnóstico de dados de vendas ou desempenho interno.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Eye className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Visualização de Dados</h4>
+              <p className="text-gray-600">Dashboards com indicadores estratégicos para tomada de decisão.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Layers className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Modelagem de Dados</h4>
+              <p className="text-gray-600">Modelos de previsão de demanda, churn ou crescimento.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Sparkles className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Machine Learning</h4>
+              <p className="text-gray-600">Implementação de classificadores e modelos de recomendação.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <FileText className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Dashboards e Relatórios</h4>
+              <p className="text-gray-600">Geração de relatórios automatizados para gestão e auditoria.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <Cpu className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Ferramentas e Tecnologias</h4>
+              <p className="text-gray-600">Automação de processos com scripts Python e Power BI.</p>
+            </div>
+          </div>
+          <div className="flex items-start space-x-4">
+            <MessageSquareShare className="h-6 w-6 text-blue-600" />
+            <div>
+              <h4 className="font-semibold">Comunicação de Resultados</h4>
+              <p className="text-gray-600">Apresentações executivas e materiais visuais para reuniões.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
 
       {/* Detailed Services Section */}
       <section className="py-20 bg-white">
