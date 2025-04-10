@@ -61,6 +61,16 @@ function App() {
 
       {/* Navigation Links */}
       <div className="hidden md:flex items-center space-x-8">
+      <a href="#pacotes" className="text-gray-400 hover:text-white transition-colors">
+  Pacotes
+</a>
+<a
+  href="#formulario"
+  className="text-gray-600 hover:text-blue-600 transition-colors"
+>
+  Atendimento
+</a>
+
         <a 
           href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer." 
           target="_blank" 
@@ -590,13 +600,15 @@ function App() {
       </section>
 
 
-      <div className="container mx-auto px-6 py-10">
+      <div id="pacotes" className="container mx-auto px-6 py-10">
   <h1 className="text-4xl font-bold text-center mb-4">Pacotes de Serviços</h1>
   <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
-    Escolha o plano ideal para as suas necessidades!</p>
-    <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
+    Escolha o plano ideal para as suas necessidades!
+  </p>
+  <p className="text-lg text-gray-600 text-center max-w-3xl mx-auto mb-10">
     Oferecemos desde consultorias pontuais até soluções completas e serviços recorrentes
-    </p>
+  </p>
+
 
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     <PlanCard
@@ -639,8 +651,11 @@ function App() {
   </div>
 
   <div className="App">
-      <FormularioServicos />
-    </div>
+  <section id="formulario">
+    <FormularioServicos />
+  </section>
+</div>
+
 
 
 
