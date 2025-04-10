@@ -5,6 +5,7 @@ import TechStack from "./TechStacks";
 import PlanCard from "./PlanCard";
 import FormularioServicos from "./FormularioServicos";
 import PoliticaPrivacidadeDropdown from "./PoliticaPrivacidadeDropdown";
+import Header from './Header';
 
 
 
@@ -40,6 +41,7 @@ import {
   Book,
   Download,
   Loader,
+  menuOpen,
   CheckCheck,
   MessagesSquare,
 } from 'lucide-react';
@@ -50,44 +52,10 @@ function App() {
   return (
     <div className="min-h-screen bg-white">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white shadow-md z-50">
-  <nav className="container mx-auto px-6 py-4">
-    <div className="flex items-center justify-between">
-{/* Logo Section */}
-<div className="flex items-center space-x-2">
-  <img src="/LOGO.png" alt="Logo Data Designer" className="h-8 w-auto" />
-  <span className="text-xl font-bold text-gray-800">Data Designer</span>
+      <div className="App">
+  <Header />
+  {/* outras seções aqui */}
 </div>
-
-      {/* Navigation Links */}
-      <div className="hidden md:flex items-center space-x-8">
-      <a href="#pacotes" className="text-gray-400 hover:text-white transition-colors">
-  Pacotes
-</a>
-<a
-  href="#formulario"
-  className="text-gray-600 hover:text-blue-600 transition-colors"
->
-  Atendimento
-</a>
-
-        <a 
-          href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer." 
-          target="_blank" 
-          rel="noopener noreferrer"
-          className="bg-green-600 text-white px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-green-700 transition-colors"
-        >
-          <img 
-            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
-            alt="WhatsApp Logo" 
-            className="h-5 w-5"
-          />
-          <span>Entre em Contato</span>
-        </a>
-      </div>
-    </div>
-  </nav>
-</header>
 
 
 
