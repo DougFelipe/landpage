@@ -13,7 +13,30 @@ const Header = () => {
             <span className="text-xl font-bold text-gray-800">Data Designer</span>
           </div>
 
-          {/* Botão de menu mobile */}
+          {/* Desktop navigation - aligned right */}
+          <div className="hidden md:flex items-center space-x-6 ml-auto">
+            <a href="#pacotes" className="text-gray-800 hover:text-blue-600 transition-colors">
+              Pacotes
+            </a>
+            <a href="#formulario" className="text-gray-800 hover:text-blue-600 transition-colors">
+              Atendimento Rápido
+            </a>
+            <a
+              href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-green-600 text-white px-5 py-2 rounded-full flex items-center space-x-2 hover:bg-green-700 transition-colors"
+            >
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+                alt="WhatsApp Logo"
+                className="h-5 w-5"
+              />
+              <span>Contato</span>
+            </a>
+          </div>
+
+          {/* Mobile menu toggle */}
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-gray-800 focus:outline-none"
@@ -27,33 +50,17 @@ const Header = () => {
               />
             </svg>
           </button>
-
-          {/* Navegação desktop */}
-          <div className="hidden md:flex items-center space-x-8">
-            <a href="#pacotes" className="text-gray-800 hover:text-blue-600 transition-colors">Pacotes</a>
-            <a href="#formulario" className="text-gray-800 hover:text-blue-600 transition-colors">Atendimento</a>
-
-            <a
-              href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-green-600 text-white px-6 py-2 rounded-full flex items-center space-x-2 hover:bg-green-700 transition-colors"
-            >
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
-                alt="WhatsApp Logo"
-                className="h-5 w-5"
-              />
-              <span>Entre em Contato</span>
-            </a>
-          </div>
         </div>
 
-        {/* Menu mobile */}
+        {/* Mobile navigation */}
         {menuOpen && (
-          <div className="mt-4 md:hidden flex flex-col items-start space-y-4">
-            <a href="#pacotes" className="text-gray-800 hover:text-blue-600 transition-colors">Pacotes</a>
-            <a href="#formulario" className="text-gray-800 hover:text-blue-600 transition-colors">Atendimento</a>
+          <div className="mt-4 md:hidden flex flex-col items-end space-y-3">
+            <a href="#pacotes" className="text-gray-800 hover:text-blue-600 transition-colors">
+              Pacotes
+            </a>
+            <a href="#formulario" className="text-gray-800 hover:text-blue-600 transition-colors">
+              Atendimento
+            </a>
             <a
               href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer."
               target="_blank"
@@ -65,7 +72,7 @@ const Header = () => {
                 alt="WhatsApp Logo"
                 className="h-5 w-5"
               />
-              <span>Entre em Contato</span>
+              <span>Contato</span>
             </a>
           </div>
         )}
