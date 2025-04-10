@@ -4,6 +4,7 @@ import FAQ from "./FAQ";
 import TechStack from "./TechStacks"; 
 import PlanCard from "./PlanCard";
 import FormularioServicos from "./FormularioServicos";
+import PoliticaPrivacidadeDropdown from "./PoliticaPrivacidadeDropdown";
 
 
 
@@ -775,7 +776,9 @@ function App() {
       <FAQ />
     </div>
 
-
+    <div>
+  <PoliticaPrivacidadeDropdown />
+</div>
 
 
 
