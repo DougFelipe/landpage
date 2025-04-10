@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Info } from "lucide-react";
+import { Info, ChevronDown, ChevronUp } from "lucide-react";
+
 
 const criterios = {
 "Características dos Dados": [
@@ -81,7 +82,6 @@ const criterios = {
 };
 
 
-
 const PrecoBtn = () => {
     const [aberto, setAberto] = useState(false);
     const [categoriaAberta, setCategoriaAberta] = useState<string | null>(null);
@@ -90,7 +90,6 @@ const PrecoBtn = () => {
       setCategoriaAberta(categoriaAberta === cat ? null : cat);
     };
   
-    // Função de ordenação personalizada por impacto
     const ordenarPorImpacto = (a: any, b: any) => {
       const ordem = { "Baixo": 0, "Médio": 1, "Alto": 2 };
       return ordem[a.impacto] - ordem[b.impacto];
@@ -112,38 +111,45 @@ const PrecoBtn = () => {
               {Object.entries(criterios).map(([categoria, itens]) => (
                 <div
                   key={categoria}
-                  className="border border-gray-200 rounded-md shadow-sm bg-white"
+                  className="border border-gray-200 rounded-md shadow-md bg-white transition"
                 >
                   <button
-                    className="w-full text-left px-4 py-3 font-semibold bg-gray-100 hover:bg-gray-200 rounded-t-md"
+                    className="w-full text-left px-4 py-3 font-semibold bg-gray-100 hover:bg-gray-200 flex justify-between items-center cursor-pointer rounded-t-md"
                     onClick={() => toggleCategoria(categoria)}
                   >
-                    {categoria}
+                    <span>{categoria}</span>
+                    {categoriaAberta === categoria ? (
+                      <ChevronUp className="w-5 h-5 text-gray-500" />
+                    ) : (
+                      <ChevronDown className="w-5 h-5 text-gray-500" />
+                    )}
                   </button>
                   {categoriaAberta === categoria && (
                     <ul className="p-4 space-y-3">
-                      {[...itens].sort(ordenarPorImpacto).map(({ criterio, descricao, impacto }, idx) => (
-                        <li
-                          key={idx}
-                          className="text-sm border-b pb-2 last:border-0"
-                        >
-                          <strong>{criterio}</strong> —{" "}
-                          <span className="text-gray-700">{descricao}</span>
-                          <br />
-                          <strong>Impacto:</strong>{" "}
-                          <span
-                            className={`italic ${
-                              impacto === "Alto"
-                                ? "text-red-600"
-                                : impacto === "Médio"
-                                ? "text-yellow-600"
-                                : "text-green-600"
-                            }`}
+                      {[...itens].sort(ordenarPorImpacto).map(
+                        ({ criterio, descricao, impacto }, idx) => (
+                          <li
+                            key={idx}
+                            className="text-sm border-b pb-2 last:border-0"
                           >
-                            {impacto}
-                          </span>
-                        </li>
-                      ))}
+                            <strong>{criterio}</strong> —{" "}
+                            <span className="text-gray-700">{descricao}</span>
+                            <br />
+                            <strong>Impacto:</strong>{" "}
+                            <span
+                              className={`italic font-semibold ${
+                                impacto === "Alto"
+                                  ? "text-red-600"
+                                  : impacto === "Médio"
+                                  ? "text-yellow-600"
+                                  : "text-green-600"
+                              }`}
+                            >
+                              {impacto}
+                            </span>
+                          </li>
+                        )
+                      )}
                     </ul>
                   )}
                 </div>
@@ -156,5 +162,3 @@ const PrecoBtn = () => {
   };
   
   export default PrecoBtn;
-  
-  
