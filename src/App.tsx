@@ -543,7 +543,7 @@ function App() {
     <PlanCard
       title="Sob Demanda"
       description="Ideal para quem precisa de suporte rápido e flexível. Você contrata apenas o tempo necessário para resolver suas demandas específicas."
-      price="Apenas R$89"
+      price="Apenas 89"
       features={[
         "*Oferta válida apenas em fevereiro",
         " Atendimento sob medida para suas necessidades",
