@@ -4,49 +4,98 @@ const formFields = {
   "Sob Demanda": [
     { name: "nome", label: "Nome completo", type: "text" },
     { name: "email", label: "Email para contato", type: "email" },
-    { name: "descricao", label: "Descreva brevemente a sua demanda", type: "textarea" },
-    { name: "preferencia", label: "Tem preferência de data ou horário?", type: "text" },
+    { name: "telefone", label: "Telefone para contato (WhatsApp)", type: "text" },
     {
       name: "tipoAtendimento",
-      label: "Tipo de atendimento desejado:",
+      label: "Tipo de atendimento desejado",
       type: "checkbox",
-      options: ["Diagnóstico rápido", "Orientação por videochamada", "Entrega de relatório"]
-    }
-  ],
-  "Avaliação e Planejamento": [
-    { name: "nome", label: "Nome completo", type: "text" },
-    { name: "email", label: "Email para contato", type: "email" },
-    { name: "objetivo", label: "Qual o objetivo do seu projeto?", type: "textarea" },
-    { name: "estadoProjeto", label: "Em que estágio está o seu projeto?", type: "text" },
+      options: [
+        "Diagnóstico rápido (análise pontual com feedback em até 48h)",
+        "Orientação por videochamada (consulta em tempo real)",
+        "Entrega de relatório (documento completo com insights e recomendações)",
+        "Dashboards interativos",
+        "Consultoria personalizada contínua",
+        "Resolução de dúvidas específicas com suporte técnico"
+      ]
+    },
     {
-      name: "interesses",
-      label: "Quais destas etapas deseja incluir:",
-      type: "checkbox",
-      options: ["Diagnóstico inicial", "Análise exploratória", "Plano de execução"]
-    }
-  ],
-  "Execução Completa": [
-    { name: "nome", label: "Nome completo", type: "text" },
-    { name: "email", label: "Email para contato", type: "email" },
-    { name: "descricaoCompleta", label: "Descreva seu projeto e as entregas esperadas", type: "textarea" },
-    { name: "prazo", label: "Qual o prazo estimado?", type: "text" },
+      name: "preferenciaHorario",
+      label: "Qual o melhor horário para contato ou atendimento?",
+      type: "select",
+      options: [
+        "Manhã (08h às 12h)",
+        "Tarde (13h às 17h)",
+        "Noite (18h às 21h)",
+        "Horário comercial (09h às 18h)",
+        "Fins de semana ou feriados",
+        "Indiferente"
+      ]
+    },
     {
-      name: "componentes",
-      label: "Inclua no pacote:",
-      type: "checkbox",
-      options: ["Dashboard", "Relatório PDF", "Modelo preditivo"]
-    }
-  ],
-  "Serviços Recorrentes": [
-    { name: "nome", label: "Nome completo", type: "text" },
-    { name: "email", label: "Email para contato", type: "email" },
-    { name: "frequencia", label: "Qual a frequência de suporte desejada? (ex: semanal, mensal)", type: "text" },
-    { name: "tipoServico", label: "Quais serviços gostaria de incluir?", type: "textarea" },
+      name: "conhecimentoDados",
+      label: "Qual o seu nível de familiaridade com análise e manipulação de dados?",
+      type: "select",
+      options: [
+        "Nenhum – preciso de ajuda desde o início",
+        "Básico – compreendo planilhas e gráficos simples",
+        "Intermediário – uso ferramentas como Excel, Power BI ou Python",
+        "Avançado – tenho experiência com bancos de dados e estatísticas"
+      ]
+    },
     {
-      name: "itensAdicionais",
-      label: "Deseja incluir:",
-      type: "checkbox",
-      options: ["Suporte por email", "Análise quinzenal", "Atualizações em dashboard"]
+      name: "prazoDesejado",
+      label: "Prazo desejado para entrega do serviço",
+      type: "select",
+      options: [
+        "1 a 2 dias",
+        "3 a 5 dias úteis",
+        "1 semana",
+        "2 semanas",
+        "Até o fim do mês",
+        "Sem urgência definida"
+      ]
+    },
+    {
+      name: "dadosSensiveis",
+      label: "Os dados fornecidos contêm informações sensíveis?",
+      type: "radio",
+      options: ["Sim", "Não"]
+    },
+    {
+      name: "sensibilidadeDados",
+      label: "Qual o grau de confidencialidade dos dados?",
+      type: "radio",
+      options: [
+        "Alta – dados restritos, exigem sigilo",
+        "Média – dados internos, sem exposição pública",
+        "Baixa – dados abertos ou públicos"
+      ]
+    },
+    {
+      name: "volumeDados",
+      label: "Volume estimado dos dados a serem analisados",
+      type: "select",
+      options: [
+        "Menos de 1MB (pequeno – poucos registros)",
+        "Entre 1MB e 100MB (médio – planilhas comuns)",
+        "Entre 100MB e 1GB (grande – conjuntos com múltiplas fontes)",
+        "Mais de 1GB (muito grande – datasets extensos ou brutos)"
+      ]
+    },
+    {
+      name: "anexoDisponivel",
+      label: "Você já possui arquivos prontos para envio?",
+      type: "radio",
+      options: [
+        "Sim – posso enviar agora",
+        "Não – ainda estou organizando",
+        "Posso providenciar após alinhamento"
+      ]
+    },
+    {
+      name: "contextoProblema",
+      label: "Descreva brevemente o problema ou objetivo a ser resolvido",
+      type: "textarea"
     }
   ]
 };
@@ -112,7 +161,6 @@ const FormularioServicos = () => {
           e entrar em contato com agilidade.
         </p>
 
-        {/* Botões de seleção */}
         <div className="flex flex-wrap justify-center gap-3 mb-8">
           {Object.keys(formFields).map((tipo) => (
             <button
@@ -129,17 +177,11 @@ const FormularioServicos = () => {
           ))}
         </div>
 
-        {/* Formulário dinâmico */}
         {servicoSelecionado && (
-          <form
-            onSubmit={handleSubmit}
-            className="bg-gray-50 p-6 rounded-xl shadow-md space-y-6"
-          >
+          <form onSubmit={handleSubmit} className="bg-gray-50 p-6 rounded-xl shadow-md space-y-6">
             {campos.map((campo) => (
               <div key={campo.name}>
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  {campo.label}
-                </label>
+                <label className="block text-sm font-medium text-gray-700 mb-1">{campo.label}</label>
                 {campo.type === "textarea" ? (
                   <textarea
                     name={campo.name}
@@ -160,11 +202,36 @@ const FormularioServicos = () => {
                         onChange={handleChange}
                         className="h-4 w-4 text-blue-600 border-gray-300 rounded"
                       />
-                      <label htmlFor={`${campo.name}-${opcao}`} className="text-sm text-gray-700">
-                        {opcao}
-                      </label>
+                      <label htmlFor={`${campo.name}-${opcao}`} className="text-sm text-gray-700">{opcao}</label>
                     </div>
                   ))
+                ) : campo.type === "radio" ? (
+                  campo.options.map((opcao) => (
+                    <div key={opcao} className="flex items-center space-x-2 mb-2">
+                      <input
+                        type="radio"
+                        id={`${campo.name}-${opcao}`}
+                        name={campo.name}
+                        value={opcao}
+                        checked={formData[campo.name] === opcao}
+                        onChange={handleChange}
+                        className="h-4 w-4 text-blue-600 border-gray-300"
+                      />
+                      <label htmlFor={`${campo.name}-${opcao}`} className="text-sm text-gray-700">{opcao}</label>
+                    </div>
+                  ))
+                ) : campo.type === "select" ? (
+                  <select
+                    name={campo.name}
+                    onChange={handleChange}
+                    value={formData[campo.name] || ""}
+                    className="w-full p-3 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500"
+                  >
+                    <option value="" disabled>Selecione uma opção</option>
+                    {campo.options.map((opcao) => (
+                      <option key={opcao} value={opcao}>{opcao}</option>
+                    ))}
+                  </select>
                 ) : (
                   <input
                     type={campo.type}
@@ -177,10 +244,7 @@ const FormularioServicos = () => {
               </div>
             ))}
 
-            <button
-              type="submit"
-              className="w-full bg-green-600 text-white py-3 rounded-full hover:bg-green-700 transition-colors"
-            >
+            <button type="submit" className="w-full bg-green-600 text-white py-3 rounded-full hover:bg-green-700 transition-colors">
               Enviar pelo WhatsApp
             </button>
           </form>
