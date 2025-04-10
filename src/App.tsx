@@ -540,46 +540,42 @@ function App() {
     Oferecemos desde consultorias pontuais até soluções completas e serviços recorrentes
     </p>
 
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
     <PlanCard
       title="Sob Demanda"
       description="Ideal para quem precisa de suporte rápido e flexível. Você contrata apenas o tempo necessário para resolver suas demandas específicas."
-      price="Apenas 89"
       features={[
         "*Oferta válida apenas em fevereiro",
-        " Atendimento sob medida para suas necessidades",
-        " Consultorias pontuais e objetivas",
-        " Flexibilidade total para ajustes no serviço",
+        "Atendimento sob medida para suas necessidades",
+        "Consultorias pontuais e objetivas",
+        "Flexibilidade total para ajustes no serviço",
       ]}
     />
     <PlanCard
       title="Avaliação e Planejamento"
       description="Se você deseja estruturar um projeto, este plano oferece uma análise detalhada do escopo, diagnóstico de problemas e planejamento estratégico para soluções eficazes."
-      price="A Combinar"
       features={[
-        " Diagnóstico preciso dos desafios do projeto",
-        " Estratégias personalizadas para otimizar resultados",
-        " Planejamento detalhado para cada etapa",
+        "Diagnóstico preciso dos desafios do projeto",
+        "Estratégias personalizadas para otimizar resultados",
+        "Planejamento detalhado para cada etapa",
       ]}
     />
     <PlanCard
       title="Execução Completa"
       description="Este plano abrange todas as fases do seu projeto, desde a concepção até a entrega final. Uma solução completa para garantir qualidade e prazos."
-      price="A Combinar"
       features={[
-        " Gerenciamento completo do projeto",
-        " Implementação de todas as etapas com acompanhamento",
-        " Garantia de entrega dentro do prazo e com qualidade",
+        "Gerenciamento completo do projeto",
+        "Implementação de todas as etapas com acompanhamento",
+        "Garantia de entrega dentro do prazo e com qualidade",
       ]}
     />
     <PlanCard
       title="Serviços Recorrentes"
       description="Para quem busca suporte contínuo, este plano oferece análises periódicas, atualizações constantes e acompanhamento estratégico para maximizar resultados."
-      price="A Combinar"
       features={[
-        " Monitoramento e análise regular de dados",
-        " Atualizações constantes para otimização",
-        " Suporte estratégico contínuo para melhorias",
+        "Monitoramento e análise regular de dados",
+        "Atualizações constantes para otimização",
+        "Suporte estratégico contínuo para melhorias",
       ]}
     />
   </div>
