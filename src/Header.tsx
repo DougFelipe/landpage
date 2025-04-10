@@ -56,10 +56,10 @@ const Header = () => {
         {menuOpen && (
           <div className="mt-4 md:hidden flex flex-col items-end space-y-3">
             <a href="#pacotes" className="text-gray-800 hover:text-blue-600 transition-colors">
-              Pacotes
+              Serviços Oferecidos
             </a>
             <a href="#formulario" className="text-gray-800 hover:text-blue-600 transition-colors">
-              Atendimento
+              Atendimento Rápido
             </a>
             <a
               href="https://wa.me/5584998017577?text=Olá%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20serviços%20do%20Data%20Designer."
