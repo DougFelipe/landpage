@@ -6,6 +6,7 @@ import PlanCard from "./PlanCard";
 import FormularioServicos from "./FormularioServicos";
 import PoliticaPrivacidadeDropdown from "./PoliticaPrivacidadeDropdown";
 import Header from './Header';
+import PrecoBtn from "./PrecoBtn";
 
 
 
@@ -618,6 +619,8 @@ function App() {
     />
   </div>
 
+  <PrecoBtn />
+
   <div className="App">
   <section id="formulario">
     <FormularioServicos />
@@ -666,16 +669,17 @@ function App() {
 <section className="py-20 bg-gray-50">
   <div className="container mx-auto px-6">
     <div className="max-w-4xl mx-auto text-center">
-      <img 
-        src="/Douglas.jpg" 
-        alt="Douglas Felipe" 
-        className="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-gray-200 shadow-lg"
-      />
+
       <h3 className="text-3xl font-bold text-gray-900">Douglas Felipe</h3>
       <h4 className="text-lg text-gray-600 font-semibold">
         Biomédico | Bioinformata | Analista de Dados
       </h4>
     </div>
+    <img 
+        src="/Douglas.jpg" 
+        alt="Douglas Felipe" 
+        className="w-60 h-60 rounded-full mx-auto mb-6 object-cover border-4 border-gray-200 shadow-lg"
+      />
 
     {/* Introduction */}
     <div className="max-w-4xl mx-auto mt-6 text-center">
