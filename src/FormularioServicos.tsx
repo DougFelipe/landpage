@@ -50,6 +50,33 @@ const formFields = {
       ]
     },
     {
+      name: "tipoEntrega",
+      label: "Tipo de entrega desejada",
+      type: "checkbox",
+      options: [
+        "Relatório textual (PDF, Word)",
+        "Dashboard interativo",
+        "Gráficos estáticos (PNG, SVG)",
+        "Script ou notebook (Jupyter, RMarkdown)",
+        "Modelo treinado (.pkl, .rds)",
+        "Documentação técnica",
+        "Repositório organizado (GitHub)"
+      ]
+    },
+    {
+      name: "formatoFinalPreferido",
+      label: "Formato preferido da entrega final",
+      type: "select",
+      options: [
+        "PDF",
+        ".ipynb (Jupyter Notebook)",
+        ".csv",
+        ".pkl / .rds",
+        "Link online",
+        "Outro (especificar depois)"
+      ]
+    },
+    {
       name: "urgenciaEntrega",
       label: "Qual a urgência da entrega?",
       type: "select",
@@ -114,60 +141,66 @@ const formFields = {
   ]
 };
 
+const formatMessage = (tipo: string, dados: { [key: string]: any }) => {
+  const linhas: string[] = [];
 
-const formatMessage = (tipo, dados) => {
-    const icone = "!";
-    const quebra = "\n\n";
-    const camposFormatados = [];
-  
-    const ordenar = [
-      "nome",
-      "email",
-      "telefone",
+  linhas.push(`Solicitação de Atendimento: ${dados["servicosDesejados"]?.join(", ") || tipo}`);
+  linhas.push("");
+
+  const secoes: { [key: string]: string[] } = {
+    "IDENTIFICAÇÃO DO CLIENTE": ["nome", "email", "telefone"],
+    "CONHECIMENTO E PREPARAÇÃO": [
       "familiaridadeDados",
       "objetivoClaro",
       "temBriefing",
-      "disponibilidadeReunioes",
-      "tipoSuporteDesejado",
+      "disponibilidadeReunioes"
+    ],
+    "ENTREGAS ESPERADAS": [
       "tipoEntrega",
-      "formatoFinalPreferido",
+      "formatoFinalPreferido"
+    ],
+    "PRAZOS E SUPORTE": [
       "urgenciaEntrega",
       "prazoFlexivel",
       "horarioPreferidoAtendimento",
-      "canalPreferidoSuporte",
+      "canalPreferidoSuporte"
+    ],
+    "SETOR OU DOMÍNIO DE APLICAÇÃO": [
       "setorProjeto",
       "descricaoContextoProjeto"
-    ];
-  
-    for (const key of ordenar) {
-      if (dados[key] !== undefined) {
-        const nomeCampo = key
-          .replace(/([A-Z])/g, " $1")
-          .replace(/_/g, " ")
-          .toLowerCase();
-  
-        const labelFormatado =
-          nomeCampo.charAt(0).toUpperCase() + nomeCampo.slice(1);
-  
-        const valor = dados[key];
-  
-        const linha =
-          Array.isArray(valor) && valor.length > 0
-            ? `*${labelFormatado}:*\n${valor.join(", ")}`
-            : `*${labelFormatado}:* ${valor}`;
-  
-        camposFormatados.push(linha);
-      }
-    }
-  
-    const servicoPrincipal = Array.isArray(dados["servicosDesejados"])
-      ? dados["servicosDesejados"].join(", ")
-      : tipo;
-  
-    const corpo = camposFormatados.join("\n");
-  
-    return encodeURIComponent(`${icone} *Solicitação de:* ${servicoPrincipal}${quebra}${corpo}`);
+    ]
   };
+
+  Object.entries(secoes).forEach(([titulo, campos]) => {
+    linhas.push("────────────────────────────");
+    linhas.push(titulo);
+    campos.forEach((campo) => {
+      const valor = dados[campo];
+      if (valor) {
+        if (Array.isArray(valor)) {
+          valor.forEach((v) => {
+            linhas.push(`- ${v}`);
+          });
+        } else {
+          linhas.push(`${formatarLabel(campo)}: ${valor}`);
+        }
+      }
+    });
+    linhas.push("");
+  });
+
+  return encodeURIComponent(linhas.join("\n"));
+};
+
+const formatarLabel = (campo: string) => {
+  return campo
+    .replace(/([A-Z])/g, " $1")
+    .replace(/^\w/, (c) => c.toUpperCase())
+    .replace("Cpf", "CPF")
+    .replace("Id", "ID");
+};
+
+
   
   
   
