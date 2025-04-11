@@ -2,116 +2,175 @@ import React, { useState } from "react";
 
 const formFields = {
   "Formulário de Atendimento": [
+    {
+      name: "servicosDesejados",
+      label: "Selecione os serviços que deseja contratar",
+      type: "checkbox",
+      options: [
+        "Sob Demanda",
+        "Avaliação e Planejamento",
+        "Execução Completa",
+        "Serviços Recorrentes"
+      ]
+    },
     { name: "nome", label: "Nome completo", type: "text" },
     { name: "email", label: "Email para contato", type: "email" },
     { name: "telefone", label: "Telefone para contato (WhatsApp)", type: "text" },
     {
-      name: "tipoAtendimento",
-      label: "Tipo de atendimento desejado",
-      type: "checkbox",
-      options: [
-        "Diagnóstico rápido (análise pontual com feedback em até 48h)",
-        "Orientação por videochamada (consulta em tempo real)",
-        "Entrega de relatório (documento completo com insights e recomendações)",
-        "Dashboards interativos",
-        "Consultoria personalizada contínua",
-        "Resolução de dúvidas específicas com suporte técnico"
-      ]
-    },
-    {
-      name: "preferenciaHorario",
-      label: "Qual o melhor horário para contato ou atendimento?",
+      name: "familiaridadeDados",
+      label: "Qual seu nível de familiaridade com análise de dados?",
       type: "select",
       options: [
-        "Manhã (08h às 12h)",
-        "Tarde (13h às 17h)",
-        "Noite (18h às 21h)",
-        "Horário comercial (09h às 18h)",
-        "Fins de semana ou feriados",
-        "Indiferente"
+        "Nenhuma – preciso de ajuda desde o início",
+        "Básica – entendo gráficos simples e planilhas",
+        "Intermediária – uso ferramentas como Excel ou Power BI",
+        "Avançada – programo em Python ou R e trabalho com bases de dados"
       ]
     },
     {
-      name: "conhecimentoDados",
-      label: "Qual o seu nível de familiaridade com análise e manipulação de dados?",
+      name: "objetivoClaro",
+      label: "Você tem clareza sobre o objetivo do projeto?",
+      type: "radio",
+      options: ["Sim", "Mais ou menos", "Não"]
+    },
+    {
+      name: "temBriefing",
+      label: "Possui documentação ou briefing inicial?",
+      type: "radio",
+      options: ["Sim", "Ainda não", "Estou preparando"]
+    },
+    {
+      name: "disponibilidadeReunioes",
+      label: "Qual sua disponibilidade para reuniões e validações?",
       type: "select",
       options: [
-        "Nenhum – preciso de ajuda desde o início",
-        "Básico – compreendo planilhas e gráficos simples",
-        "Intermediário – uso ferramentas como Excel, Power BI ou Python",
-        "Avançado – tenho experiência com bancos de dados e estatísticas"
+        "Alta – posso participar com frequência",
+        "Média – reuniões semanais ou quinzenais",
+        "Baixa – apenas quando necessário"
       ]
     },
     {
-      name: "prazoDesejado",
-      label: "Prazo desejado para entrega do serviço",
+      name: "urgenciaEntrega",
+      label: "Qual a urgência da entrega?",
       type: "select",
       options: [
-        "1 a 2 dias",
-        "3 a 5 dias úteis",
-        "1 semana",
-        "2 semanas",
-        "Até o fim do mês",
-        "Sem urgência definida"
+        "Muito urgente (Entrega em 24h)",
+        "Urgente (1-2 dias)",
+        "Rápida (3-5 dias)",
+        "Normal (1 semana)",
+        "Médio Prazo (1-3 semanas)",     
+        "Longo Prazo (mais de 3 semanas)",
+        "Sem urgência",   
+        "Flexível",
+        "Ainda não sei"
       ]
     },
     {
-      name: "dadosSensiveis",
-      label: "Os dados fornecidos contêm informações sensíveis?",
+      name: "prazoFlexivel",
+      label: "Você é flexível quanto a esse prazo?",
       type: "radio",
       options: ["Sim", "Não"]
     },
     {
-      name: "sensibilidadeDados",
-      label: "Qual o grau de confidencialidade dos dados?",
-      type: "radio",
-      options: [
-        "Alta – dados restritos, exigem sigilo",
-        "Média – dados internos, sem exposição pública",
-        "Baixa – dados abertos ou públicos"
-      ]
-    },
-    {
-      name: "volumeDados",
-      label: "Volume estimado dos dados a serem analisados",
+      name: "horarioPreferidoAtendimento",
+      label: "Horário de atendimento preferencial",
       type: "select",
       options: [
-        "Menos de 1MB (pequeno – poucos registros)",
-        "Entre 1MB e 100MB (médio – planilhas comuns)",
-        "Entre 100MB e 1GB (grande – conjuntos com múltiplas fontes)",
-        "Mais de 1GB (muito grande – datasets extensos ou brutos)"
+        "Horário comercial (09h às 18h)",
+        "Manhã (08h às 12h)",
+        "Tarde (13h às 17h)",
+        "Noite (18h às 21h)",        
+        "Indiferente"
       ]
     },
     {
-      name: "anexoDisponivel",
-      label: "Você já possui arquivos prontos para envio?",
-      type: "radio",
+      name: "canalPreferidoSuporte",
+      label: "Canal preferencial para contato e suporte",
+      type: "select",
+      options: ["WhatsApp", "E-mail", "Videochamada", "Outro (especificar depois)"]
+    },
+    {
+      name: "setorProjeto",
+      label: "Qual setor está relacionado ao seu projeto?",
+      type: "select",
       options: [
-        "Sim – posso enviar agora",
-        "Não – ainda estou organizando",
-        "Posso providenciar após alinhamento"
+        "Saúde",
+        "Educação",
+        "Financeiro / Contábil",
+        "Setor Público",
+        "Startups",
+        "Marketing e Pesquisa",
+        "RH / Gestão de Pessoas",
+        "Acadêmico / Científico",
+        "Projeto Pessoal",
+        "Outro (especificar depois)"
       ]
     },
     {
-      name: "contextoProblema",
-      label: "Descreva brevemente o problema ou objetivo a ser resolvido",
+      name: "descricaoContextoProjeto",
+      label: "Descreva o contexto geral do projeto",
       type: "textarea"
     }
   ]
 };
 
+
 const formatMessage = (tipo, dados) => {
-  const linhas = [`Solicitação de Atendimento: *${tipo}*`];
-  for (const campo in dados) {
-    const valor = dados[campo];
-    if (Array.isArray(valor)) {
-      linhas.push(`*${campo.replace(/([A-Z])/g, ' $1')}:* ${valor.join(", ")}`);
-    } else {
-      linhas.push(`*${campo.replace(/([A-Z])/g, ' $1')}:* ${valor}`);
+    const icone = "!";
+    const quebra = "\n\n";
+    const camposFormatados = [];
+  
+    const ordenar = [
+      "nome",
+      "email",
+      "telefone",
+      "familiaridadeDados",
+      "objetivoClaro",
+      "temBriefing",
+      "disponibilidadeReunioes",
+      "tipoSuporteDesejado",
+      "tipoEntrega",
+      "formatoFinalPreferido",
+      "urgenciaEntrega",
+      "prazoFlexivel",
+      "horarioPreferidoAtendimento",
+      "canalPreferidoSuporte",
+      "setorProjeto",
+      "descricaoContextoProjeto"
+    ];
+  
+    for (const key of ordenar) {
+      if (dados[key] !== undefined) {
+        const nomeCampo = key
+          .replace(/([A-Z])/g, " $1")
+          .replace(/_/g, " ")
+          .toLowerCase();
+  
+        const labelFormatado =
+          nomeCampo.charAt(0).toUpperCase() + nomeCampo.slice(1);
+  
+        const valor = dados[key];
+  
+        const linha =
+          Array.isArray(valor) && valor.length > 0
+            ? `*${labelFormatado}:*\n${valor.join(", ")}`
+            : `*${labelFormatado}:* ${valor}`;
+  
+        camposFormatados.push(linha);
+      }
     }
-  }
-  return encodeURIComponent(linhas.join("\n"));
-};
+  
+    const servicoPrincipal = Array.isArray(dados["servicosDesejados"])
+      ? dados["servicosDesejados"].join(", ")
+      : tipo;
+  
+    const corpo = camposFormatados.join("\n");
+  
+    return encodeURIComponent(`${icone} *Solicitação de:* ${servicoPrincipal}${quebra}${corpo}`);
+  };
+  
+  
+  
 
 const FormularioServicos = () => {
   const [servicoSelecionado, setServicoSelecionado] = useState("");
@@ -161,21 +220,27 @@ const FormularioServicos = () => {
           e entrar em contato com agilidade.
         </p>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-8">
-          {Object.keys(formFields).map((tipo) => (
-            <button
-              key={tipo}
-              onClick={() => toggleFormulario(tipo)}
-              className={`px-4 py-2 rounded-full text-sm font-semibold transition-colors ${
-                servicoSelecionado === tipo
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
-              }`}
-            >
-              {tipo}
-            </button>
-          ))}
-        </div>
+        <div className="flex flex-wrap justify-center gap-4 mb-10">
+  {Object.keys(formFields).map((tipo) => (
+    <button
+      key={tipo}
+      onClick={() => toggleFormulario(tipo)}
+      className={`flex items-center gap-2 px-5 py-3 rounded-full text-sm font-semibold transition-all shadow-md ${
+        servicoSelecionado === tipo
+          ? "bg-green-600 text-white hover:bg-green-700"
+          : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+      }`}
+    >
+      <img
+        src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+        alt="WhatsApp"
+        className="w-4 h-4"
+      />
+      {tipo}
+    </button>
+  ))}
+</div>
+
 
         {servicoSelecionado && (
           <form onSubmit={handleSubmit} className="bg-gray-50 p-6 rounded-xl shadow-md space-y-6">
